@@ -1,0 +1,80 @@
+$background: #111;
+$hover: #222;
+$active: #444;
+$text: #fff;
+
+@mixin theme($background-color: $background, $text-color: $text) {
+    background-color: $background;
+    color: $text;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    @include theme;
+}
+
+div.app {
+    text-align: center;
+    padding-top: 80px;
+}
+
+div.input-fields {
+    border: 2px solid #fff;
+    margin: auto;
+    width: min-content;
+    border-radius: 12px;
+}
+
+div.input-field {
+    font-size: 130%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 650px;
+    margin: auto;
+
+    label {
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    input {
+        @include theme;
+        font-size: 120%;
+        border: none;
+        border-radius: 12px;
+        padding: 5px;
+
+        &:hover {
+            background-color: $hover;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: $active;
+        }
+    }
+}
+
+input.hidden-checkbox {
+    display: none;
+
+    +label {
+        grid-column: span 2;
+        font-size: 110%;
+        color: #f33;
+        border-radius: 12px;
+
+        &:hover {
+            background-color: $hover;
+        }
+
+        &:active {
+            background-color: $active;
+        }
+    }
+
+    &:checked+label {
+        color: #4278d6;
+    }
+}
