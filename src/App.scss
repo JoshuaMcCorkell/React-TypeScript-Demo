@@ -9,6 +9,22 @@ $text: #fff;
     font-family: 'Quicksand', sans-serif;
 }
 
+@mixin input-theme {
+    border-radius: 12px;
+
+    &:hover {
+        background-color: $hover;
+    }
+
+    &:active {
+        background-color: $active;
+    }
+
+    &:focus {
+        background-color: $active;
+    }
+}
+
 html {
     @include theme;
 }
@@ -20,9 +36,9 @@ div.app {
 
 div.input-fields {
     border: 2px solid #fff;
+    border-radius: 12px;
     margin: auto;
     width: min-content;
-    border-radius: 12px;
 }
 
 div.input-field {
@@ -31,7 +47,6 @@ div.input-field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 650px;
-    margin: auto;
 
     label {
         font-weight: bold;
@@ -40,19 +55,10 @@ div.input-field {
 
     input {
         @include theme;
+        @include input-theme;
         font-size: 120%;
         border: none;
-        border-radius: 12px;
         padding: 5px;
-
-        &:hover {
-            background-color: $hover;
-        }
-
-        &:focus {
-            outline: none;
-            background-color: $active;
-        }
     }
 }
 
@@ -60,18 +66,10 @@ input.hidden-checkbox {
     display: none;
 
     +label {
+        @include input-theme;
         grid-column: span 2;
         font-size: 110%;
         color: #f33;
-        border-radius: 12px;
-
-        &:hover {
-            background-color: $hover;
-        }
-
-        &:active {
-            background-color: $active;
-        }
     }
 
     &:checked+label {
