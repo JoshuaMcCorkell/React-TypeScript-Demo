@@ -22,22 +22,22 @@ const App: FC = () => {
 
     useEffect(() => {
         document.title = firstName.value + " " + lastName.value;
-    });
+    }, [firstName, lastName]);
 
     return (
         <div className="app">
             <div className="input-fields">
                 <InputField
-                    label="First Name:"
                     {...firstName}
+                    label="First Name:"
                 />
                 <InputField
-                    label="Surname:"
                     {...lastName}
+                    label="Surname:"
                 />
                 <InputField
-                    label="Favourite Hobby:"
                     {...favouriteHobby}
+                    label="Favourite Hobby:"
                 />
             </div>
         </div>
