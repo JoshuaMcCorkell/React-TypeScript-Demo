@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+
+html {
+    --background: #111;
+    --text: #fff;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Quicksand', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div.app {
+    text-align: center;
+    width: 100vw;
+    padding-top: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div.input-fields {
+    border: 2px solid #fff;
+    margin: auto;
+    width: min-content;
+    border-radius: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.input-field {
+    font-size: 130%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 650px;
+    margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+div.input-field label {
+    font-weight: bold;
+    padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.input-field input {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 120%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--background);
+    color: var(--text);
 }
+
+div.input-field input:focus {
+    outline: none;
+    background-color: #444;
+}
+
