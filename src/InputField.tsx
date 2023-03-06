@@ -1,5 +1,4 @@
-import { FC, ChangeEventHandler } from 'react';
-
+import { FC, ChangeEventHandler } from "react";
 
 interface InputFieldProps {
     label: string;
@@ -8,14 +7,10 @@ interface InputFieldProps {
     onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
-const InputField: FC<InputFieldProps> = props => {
+const InputField: FC<InputFieldProps> = (props) => {
     return (
         <div className="input-field">
-            <label
-                htmlFor={props.id}
-            >
-                {props.label}
-            </label>
+            <label htmlFor={props.id}>{props.label}</label>
             <input
                 id={props.id}
                 type="text"
