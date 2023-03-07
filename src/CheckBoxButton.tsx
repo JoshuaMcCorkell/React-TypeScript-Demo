@@ -1,13 +1,11 @@
-import { FC, ChangeEventHandler } from "react";
+import { FC, InputHTMLAttributes } from "react";
 
-interface CheckboxFieldProps {
+interface CheckboxButtonAttributes<T> extends InputHTMLAttributes<T> {
+    /** The text that will be displayed as the label/button of this field. */
     label: string;
-    checked: boolean;
-    id: string;
-    onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
-const CheckBoxField: FC<CheckboxFieldProps> = (props) => {
+const CheckBoxButton: FC<CheckboxButtonAttributes<HTMLInputElement>> = (props) => {
     return (
         <div className="input-field">
             <input
@@ -22,4 +20,4 @@ const CheckBoxField: FC<CheckboxFieldProps> = (props) => {
     );
 };
 
-export default CheckBoxField;
+export default CheckBoxButton;

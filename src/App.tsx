@@ -1,5 +1,5 @@
 import InputField from "./InputField";
-import CheckBoxField from "./CheckBoxField";
+import CheckBoxButton from "./CheckBoxButton";
 import React, { FC, ChangeEventHandler, useEffect, useState } from "react";
 import "./App.scss";
 
@@ -48,18 +48,21 @@ const App: FC = () => {
                         {...firstName}
                         id="first-name-input"
                         label="First Name:"
+                        placeholder="Firstname"
                     />
                     <InputField
                         {...lastName}
                         id="last-name-input"
                         label="Last Name:"
+                        placeholder="Lastname"
                     />
                     <InputField
                         {...favouriteHobby}
                         id="favourite-hobby-input"
                         label="Favourite Hobby:"
+                        placeholder="Coding"
                     />
-                    <CheckBoxField
+                    <CheckBoxButton
                         {...usesTypeScript}
                         id="uses-typescript-checkbox"
                         label={
