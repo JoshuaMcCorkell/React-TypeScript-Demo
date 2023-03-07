@@ -9,11 +9,9 @@ const CheckBoxButton: FC<CheckboxButtonAttributes<HTMLInputElement>> = (props) =
     return (
         <div className="input-field">
             <input
+                {...props}
                 className="hidden-checkbox"
-                id={props.id}
                 type="checkbox"
-                checked={props.checked}
-                onChange={props.onChange}
             />
             <label htmlFor={props.id}>{props.label}</label>
         </div>

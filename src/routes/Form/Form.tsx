@@ -1,10 +1,11 @@
+import { FC, ChangeEventHandler, useEffect, useState } from "react";
+import { Form } from "react-router-dom";
 import InputField from "./InputField";
 import CheckBoxButton from "./CheckBoxButton";
-import React, { FC, ChangeEventHandler, useEffect, useState } from "react";
-import "./App.scss";
+import "./form.scss";
 
-function useInput(defaultValue: string) {
-    const [value, setValue] = useState(defaultValue);
+function useInput(initialValue: string) {
+    const [value, setValue] = useState(initialValue);
 
     const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setValue(e.target.value);
@@ -16,8 +17,8 @@ function useInput(defaultValue: string) {
     };
 }
 
-function useCheckbox(defaultValue: boolean) {
-    const [checked, setChecked] = useState(defaultValue);
+function useCheckbox(initialState: boolean) {
+    const [checked, setChecked] = useState(initialState);
 
     const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setChecked(e.target.checked);
@@ -29,10 +30,10 @@ function useCheckbox(defaultValue: boolean) {
     };
 }
 
-const App: FC = () => {
-    const firstName = useInput("Joshua");
-    const lastName = useInput("McCorkell");
-    const favouriteHobby = useInput("Coding");
+const ReactForm: FC = () => {
+    const firstName = useInput("");
+    const lastName = useInput("");
+    const favouriteHobby = useInput("");
     const usesTypeScript = useCheckbox(true);
 
     useEffect(() => {
@@ -41,41 +42,49 @@ const App: FC = () => {
 
     return (
         <div className="app">
-            <h1 className="form-title">Form</h1>
-            <form>
+            <h1 className="title">Form</h1>
+            <Form action="/submission">
                 <div className="input-fields">
                     <InputField
                         {...firstName}
                         id="first-name-input"
+                        name="firstName"
                         label="First Name:"
                         placeholder="Firstname"
+                        tabIndex={1}
                     />
                     <InputField
                         {...lastName}
                         id="last-name-input"
+                        name="lastName"
                         label="Last Name:"
                         placeholder="Lastname"
+                        tabIndex={2}
                     />
                     <InputField
                         {...favouriteHobby}
                         id="favourite-hobby-input"
+                        name="favouriteHobby"
                         label="Favourite Hobby:"
-                        placeholder="Coding"
+                        placeholder="Hobby"
+                        tabIndex={3}
                     />
                     <CheckBoxButton
                         {...usesTypeScript}
                         id="uses-typescript-checkbox"
+                        name="usesTypeScript"
                         label={
                             usesTypeScript.checked
                                 ? "Uses TypeScript!"
                                 : "Doesn't Use TypeScript"
                         }
+                        tabIndex={4}
                     />
                 </div>
                 <input type="submit" />
-            </form>
+            </Form>
         </div>
     );
 };
 
-export default App;
+export default ReactForm;

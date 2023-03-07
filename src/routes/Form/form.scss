@@ -1,13 +1,4 @@
-$background: #111;
-$hover: #222;
-$active: #444;
-$text: #fff;
-
-@mixin theme($background-color: $background, $text-color: $text) {
-    background-color: $background;
-    color: $text;
-    font-family: 'Quicksand', sans-serif;
-}
+@import "../../app";
 
 @mixin input-theme {
     border-radius: 12px;
@@ -23,20 +14,6 @@ $text: #fff;
     &:focus {
         background-color: $active;
         outline: none;
-    }
-}
-
-html {
-    @include theme;
-}
-
-div.app {
-    text-align: center;
-    padding-top: 30px;
-
-    h1.form-title {
-        font-size: 42px;
-        padding-bottom: 10px;
     }
 }
 
@@ -70,7 +47,13 @@ div.input-field {
 }
 
 input.hidden-checkbox {
-    display: none;
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 
     +label {
         @include input-theme;
@@ -82,6 +65,16 @@ input.hidden-checkbox {
 
     &:checked+label {
         color: #4278d6;
+    }
+
+    border-radius: 12px;
+
+    &:active+label {
+        background-color: $active;
+    }
+
+    &:focus+label {
+        background-color: $hover;
     }
 }
 

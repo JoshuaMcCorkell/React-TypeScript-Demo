@@ -1,14 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+import Root from "./routes/Root";
+import Form from "./routes/Form/Form";
+import Submission from "./routes/Submission/Submission";
+import ErrorPage from "./ErrorPage";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/form",
+                element: <Form />,
+            },
+            {
+                path: "/submission",
+                element: <Submission />,
+                loader: async ({ request }) => {
+                    const url = new URL(request.url);
+                    return url.searchParams;
+                }
+            },
+        ],
+    },
+]);
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <App />
+        <RouterProvider router={router} />
     </React.StrictMode>
 );
 

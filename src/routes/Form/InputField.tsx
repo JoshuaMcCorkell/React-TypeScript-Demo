@@ -11,6 +11,7 @@ const InputField: FC<InputFieldAttributes<HTMLInputElement>> = (props) => {
             <label htmlFor={props.id}>{props.label}</label>
             <input
                 {...props}
+                type="text"
             />
         </div>
     );
