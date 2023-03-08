@@ -1,10 +1,18 @@
 import { FC } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import logo from "../logo512.png";
 
-const Root: FC = () => {
+interface RootOutletProps {
+    outlet?: any;
+}
+
+const Root: FC<RootOutletProps> = (props) => {
     return (
         <>
-            <Outlet />
+            <Link to="/">
+                <img src={logo} alt="Logo" id="global-logo" />
+            </Link>
+            {props.outlet ? props.outlet : <Outlet />}
         </>
     );
 };

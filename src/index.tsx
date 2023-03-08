@@ -1,18 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, redirect } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Root from "./routes/Root";
 import Form from "./routes/Form/Form";
 import Submission from "./routes/Submission/Submission";
 import ErrorPage from "./ErrorPage";
+import "./global.scss";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
-        errorElement: <ErrorPage />,
+        errorElement: <Root outlet={<ErrorPage />} />,
         children: [
+            {
+                path: "/",
+                loader: async () => {
+                    return redirect("/form");
+                },
+            },
             {
                 path: "/form",
                 element: <Form />,

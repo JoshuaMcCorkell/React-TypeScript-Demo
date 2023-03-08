@@ -51,7 +51,6 @@ const ReactForm: FC = () => {
                         name="firstName"
                         label="First Name:"
                         placeholder="Firstname"
-                        tabIndex={1}
                     />
                     <InputField
                         {...lastName}
@@ -59,7 +58,6 @@ const ReactForm: FC = () => {
                         name="lastName"
                         label="Last Name:"
                         placeholder="Lastname"
-                        tabIndex={2}
                     />
                     <InputField
                         {...favouriteHobby}
@@ -67,7 +65,6 @@ const ReactForm: FC = () => {
                         name="favouriteHobby"
                         label="Favourite Hobby:"
                         placeholder="Hobby"
-                        tabIndex={3}
                     />
                     <CheckBoxButton
                         {...usesTypeScript}
@@ -78,7 +75,6 @@ const ReactForm: FC = () => {
                                 ? "Uses TypeScript!"
                                 : "Doesn't Use TypeScript"
                         }
-                        tabIndex={4}
                     />
                 </div>
                 <input type="submit" />

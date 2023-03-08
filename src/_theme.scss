@@ -8,17 +8,3 @@ $text: #fff;
     color: $text;
     font-family: 'Quicksand', sans-serif;
 }
-
-html {
-    @include theme;
-}
-
-div.app {
-    text-align: center;
-    padding-top: 30px;
-
-    h1.title {
-        font-size: 42px;
-        padding-bottom: 10px;
-    }
-}
