@@ -41,7 +41,7 @@ const ReactForm: FC = (props) => {
     }, [firstName, lastName]);
 
     return (
-        <div className="app">
+        <div className="app form">
             <h1 className="title">Form</h1>
             <Form action="/submission">
                 <div className="input-fields">

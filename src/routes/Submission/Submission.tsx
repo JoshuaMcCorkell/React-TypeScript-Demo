@@ -9,7 +9,7 @@ const Submission: FC = () => {
         document.title = "Received " + fullName;
     }, [fullName])
     return (
-        <div className="app">
+        <div className="app submission">
             <h1 className="title">Submission Received...</h1>
             <div className="results">
                 <p>Name: {fullName}</p>

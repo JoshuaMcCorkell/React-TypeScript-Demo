@@ -17,69 +17,71 @@
     }
 }
 
-form {
-    @include container;
-    margin: auto;
-    width: min-content;
-}
-
-div.input-field {
-    font-size: 130%;
-    padding-bottom: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 650px;
-
-    label {
-        font-weight: bold;
-        padding: 5px;
+div.form {
+    form {
+        @include container;
+        margin: auto;
+        width: min-content;
     }
-
-    input {
+    
+    div.input-field {
+        font-size: 130%;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 650px;
+    
+        label {
+            font-weight: bold;
+            padding: 5px;
+        }
+    
+        input {
+            @include theme;
+            @include input-theme;
+            font-size: 120%;
+            border: none;
+            padding: 5px;
+        }
+    }
+    
+    input.hidden-checkbox {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    
+        +label {
+            @include input-theme;
+            grid-column: span 2;
+            font-size: 110%;
+            color: $red;
+            user-select: none;
+        }
+    
+        &:checked+label {
+            color: $tsblue;
+        }
+    
+        border-radius: 12px;
+    
+        &:active+label {
+            background-color: $active;
+        }
+    
+        &:focus+label {
+            background-color: $hover;
+        }
+    }
+    
+    input[type="submit"] {
         @include theme;
         @include input-theme;
-        font-size: 120%;
+        font-size: 150%;
         border: none;
-        padding: 5px;
+        padding: 10px;
     }
-}
-
-input.hidden-checkbox {
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
-    border: 0;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-
-    +label {
-        @include input-theme;
-        grid-column: span 2;
-        font-size: 110%;
-        color: $red;
-        user-select: none;
-    }
-
-    &:checked+label {
-        color: $tsblue;
-    }
-
-    border-radius: 12px;
-
-    &:active+label {
-        background-color: $active;
-    }
-
-    &:focus+label {
-        background-color: $hover;
-    }
-}
-
-input[type="submit"] {
-    @include theme;
-    @include input-theme;
-    font-size: 150%;
-    border: none;
-    padding: 10px;
 }

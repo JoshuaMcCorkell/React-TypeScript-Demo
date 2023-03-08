@@ -1,12 +1,13 @@
 @import "../../theme";
 
-
-div.results {
-    @include container;
-    width: 650px;
-    margin: auto;
-
-    p {
-        font-size: 170%;
+div.submission {
+    div.results {
+        @include container;
+        width: 650px;
+        margin: auto;
+    
+        p {
+            font-size: 170%;
+        }
     }
 }

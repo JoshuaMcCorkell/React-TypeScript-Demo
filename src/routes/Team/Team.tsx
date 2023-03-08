@@ -7,7 +7,7 @@ const Team: FC = () => {
     }, [])
 
     return (
-        <div className="app">
+        <div className="app team">
             <h1 className="title">Our Team</h1>
             <div className="team-names">
                 <p className="name">
