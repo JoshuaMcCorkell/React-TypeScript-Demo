@@ -3,6 +3,9 @@ $hover: #222;
 $active: #444;
 $text: #fff;
 
+$tsblue: #4278d6;
+$red: #f33;
+
 @mixin theme($background-color: $background, $text-color: $text) {
     background-color: $background;
     color: $text;

@@ -59,12 +59,12 @@ input.hidden-checkbox {
         @include input-theme;
         grid-column: span 2;
         font-size: 110%;
-        color: #f33;
+        color: $red;
         user-select: none;
     }
 
     &:checked+label {
-        color: #4278d6;
+        color: $tsblue;
     }
 
     border-radius: 12px;

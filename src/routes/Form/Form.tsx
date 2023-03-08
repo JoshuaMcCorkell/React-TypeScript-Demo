@@ -30,14 +30,14 @@ function useCheckbox(initialState: boolean) {
     };
 }
 
-const ReactForm: FC = () => {
+const ReactForm: FC = (props) => {
     const firstName = useInput("");
     const lastName = useInput("");
     const favouriteHobby = useInput("");
     const usesTypeScript = useCheckbox(true);
 
     useEffect(() => {
-        document.title = firstName.value + " " + lastName.value;
+        document.title = "Form " + firstName.value + " " + lastName.value;
     }, [firstName, lastName]);
 
     return (

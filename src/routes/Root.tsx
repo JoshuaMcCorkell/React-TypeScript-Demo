@@ -9,9 +9,18 @@ interface RootOutletProps {
 const Root: FC<RootOutletProps> = (props) => {
     return (
         <>
-            <Link to="/">
-                <img src={logo} alt="Logo" id="global-logo" />
-            </Link>
+            <div className="sidenav">
+                <Link to="/">
+                    <img src={logo} alt="Logo" id="navlogo" />
+                </Link>
+                <Link to="/form">
+                    Form
+                </Link>
+                <Link to="/our-team">
+                    Our Team
+                </Link>
+            </div>
+            
             {props.outlet ? props.outlet : <Outlet />}
         </>
     );

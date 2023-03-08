@@ -1,0 +1,38 @@
+@import "../../theme";
+
+div.team-names {
+    display: inline-block;
+}
+
+p.name {
+    font-size: 160%;
+    position: relative;
+    width: fit-content;
+
+    &::before {
+       transform: scaleX(0);
+       transform-origin: bottom right;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        inset: 0 0 0 0;
+        background: darken($tsblue, 25%);
+        transition: transform .4s;
+        z-index: -1;
+    }
+}
+
+mark.role {
+    font-style: italic;
+    background: none;
+    color: $text;
+}

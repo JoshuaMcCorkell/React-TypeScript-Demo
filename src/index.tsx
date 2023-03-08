@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, redirect } from "react-router-dom";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    redirect,
+} from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Root from "./routes/Root";
 import Form from "./routes/Form/Form";
 import Submission from "./routes/Submission/Submission";
+import Team from "./routes/Team/Team";
 import ErrorPage from "./ErrorPage";
 import "./global.scss";
 
@@ -25,12 +30,16 @@ const router = createBrowserRouter([
                 element: <Form />,
             },
             {
+                path: "/our-team",
+                element: <Team />,
+            },
+            {
                 path: "/submission",
                 element: <Submission />,
                 loader: async ({ request }) => {
                     const url = new URL(request.url);
                     return url.searchParams;
-                }
+                },
             },
         ],
     },

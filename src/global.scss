@@ -14,9 +14,30 @@ div.app {
     }
 }
 
-#global-logo {
+div.sidenav {
     position: fixed;
-    width: 100px;
-    top: 30px;
-    left: 30px;
+    padding: 15px;
+    background-color: lighten($background, 5%);
+    height: calc(100vh - 50px);
+
+    img#navlogo {
+        width: 100px;
+        top: 30px;
+        left: 30px;
+    }
+
+    a {
+        display: block;
+        font-size: 130%;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 15px;    
+        transition: background-color 0.2s;
+    }
+
+    a:not(:has(#navlogo)):hover {
+        background-color: $active;
+    }
+    
 }
