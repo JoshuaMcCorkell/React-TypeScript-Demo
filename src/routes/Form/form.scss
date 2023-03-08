@@ -18,11 +18,9 @@
 }
 
 form {
-    border: 2px solid #fff;
-    border-radius: 12px;
+    @include container;
     margin: auto;
     width: min-content;
-    padding: 20px;
 }
 
 div.input-field {

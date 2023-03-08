@@ -7,7 +7,7 @@ const Submission: FC = () => {
     const fullName = (formInputs.get("firstName") || "") + " " + (formInputs.get("lastName") || "");
     useEffect(() => {
         document.title = "Received " + fullName;
-    }, [])
+    }, [fullName])
     return (
         <div className="app">
             <h1 className="title">Submission Received...</h1>

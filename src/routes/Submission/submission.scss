@@ -2,11 +2,9 @@
 
 
 div.results {
-    border: 2px solid #fff;
-    border-radius: 12px;
+    @include container;
     width: 650px;
     margin: auto;
-    padding: 20px;
 
     p {
         font-size: 170%;

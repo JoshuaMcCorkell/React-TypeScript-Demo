@@ -11,3 +11,9 @@ $red: #f33;
     color: $text;
     font-family: 'Quicksand', sans-serif;
 }
+
+@mixin container($padding: 20px) {
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: $padding;
+}

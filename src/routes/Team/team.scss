@@ -1,7 +1,10 @@
 @import "../../theme";
 
 div.team-names {
+    @include container;
     display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 p.name {
