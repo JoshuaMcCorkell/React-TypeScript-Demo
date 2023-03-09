@@ -4,17 +4,24 @@ import "./submission.scss";
 
 const Submission: FC = () => {
     const formInputs = useLoaderData() as URLSearchParams;
-    const fullName = (formInputs.get("firstName") || "") + " " + (formInputs.get("lastName") || "");
+    const fullName =
+        (formInputs.get("firstName") || "") +
+        " " +
+        (formInputs.get("lastName") || "");
     useEffect(() => {
         document.title = "Received " + fullName;
-    }, [fullName])
+    }, [fullName]);
     return (
         <div className="app submission">
             <h1 className="title">Submission Received...</h1>
             <div className="results">
                 <p>Name: {fullName}</p>
                 <p>Hobby: {formInputs.get("favouriteHobby")}</p>
-                <p>{formInputs.get("usesTypeScript")? "Uses TypeScript" : "Doesn't Use TypeScript"}</p>
+                <p>
+                    {formInputs.get("usesTypeScript")
+                        ? "Uses TypeScript"
+                        : "Doesn't Use TypeScript"}
+                </p>
             </div>
         </div>
     );

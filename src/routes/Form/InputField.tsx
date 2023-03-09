@@ -9,10 +9,7 @@ const InputField: FC<InputFieldAttributes<HTMLInputElement>> = (props) => {
     return (
         <div className="input-field">
             <label htmlFor={props.id}>{props.label}</label>
-            <input
-                {...props}
-                type="text"
-            />
+            <input {...props} type="text" />
         </div>
     );
 };

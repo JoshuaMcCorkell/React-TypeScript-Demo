@@ -4,7 +4,7 @@ import "./team.scss";
 const Team: FC = () => {
     useEffect(() => {
         document.title = "Our Team";
-    }, [])
+    }, []);
 
     return (
         <div className="app team">

@@ -5,14 +5,12 @@ interface CheckboxButtonAttributes<T> extends InputHTMLAttributes<T> {
     label: string;
 }
 
-const CheckBoxButton: FC<CheckboxButtonAttributes<HTMLInputElement>> = (props) => {
+const CheckBoxButton: FC<CheckboxButtonAttributes<HTMLInputElement>> = (
+    props
+) => {
     return (
         <div className="input-field">
-            <input
-                {...props}
-                className="hidden-checkbox"
-                type="checkbox"
-            />
+            <input {...props} className="hidden-checkbox" type="checkbox" />
             <label htmlFor={props.id}>{props.label}</label>
         </div>
     );
