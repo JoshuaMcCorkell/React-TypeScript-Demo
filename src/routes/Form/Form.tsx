@@ -21,7 +21,7 @@ const ReactForm: FC = (props) => {
        which in this case is the first and last name. */
     useEffect(() => {
         document.title = "Form " + firstName.value + " " + lastName.value;
-    }, [firstName, lastName]);
+    }, [firstName.value, lastName.value]);
 
     /* InputField and CheckBoxField are custom components, 
        see the components folder for their code.
