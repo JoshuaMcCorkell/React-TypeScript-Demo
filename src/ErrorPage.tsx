@@ -5,7 +5,6 @@ import { useRouteError, isRouteErrorResponse } from "react-router-dom";
  * The Error Page for the app.
  * Displays when there is an error, either in rendering, or in routing.
  * e.g. 404 Not Found Error
- * @returns {FC}
  */
 const ErrorPage: FC = () => {
     const error = useRouteError();
