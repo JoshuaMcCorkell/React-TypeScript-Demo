@@ -1,7 +1,11 @@
 import { FC, useEffect } from "react";
 import "./team.scss";
 
+// FC is the TypeScript type for React Function Components.
 const Team: FC = () => {
+
+    // Using useEffect with the dependencies argument as an empty list
+    // means this effect will only run once, when the component loads.
     useEffect(() => {
         document.title = "Our Team";
     }, []);

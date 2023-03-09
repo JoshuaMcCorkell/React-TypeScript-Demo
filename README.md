@@ -29,10 +29,22 @@ opening the file by itself will not work.
 
 Contains the source code for the project. There are explanations for each file inside the file. 
 
-`setupTests.ts`, `react-app-env.d.ts` and `reportWebVitals.ts` are files that are created automatically
-with the project. `react-app-env.d.ts` is necessary for the project to work with TypeScript (I believe), 
-but the others are not strictly necessary (`setupTests.ts` is for tests, and I'm not 100% sure what 
-`reportWebVitals.ts` is for, but I think it's something to do with benchmarking (??))
+`react-app-env.d.ts` is necessary for the project to use TypeScript (I believe...)
+
+## Links
+
+[React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+
+[React Hooks](https://reactjs.org/docs/hooks-overview.html)
+
+[React Router](https://reactrouter.com/en/main/start/overview)
+
+[TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+
+[Guide to SCSS/Sass](https://sass-lang.com/guide)
 
 
+By Joshua McCorkell
 
+I just made this demo partly for my own learning how to use React,
+and then extended it and added comments to use as a demo, with some extra stuff that we may use in our project.

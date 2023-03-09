@@ -1,3 +1,8 @@
+/*
+The majority of the code is similar to CheckBoxButton.tsx, 
+so see that file for more details.
+*/
+
 import { FC, InputHTMLAttributes } from "react";
 
 interface InputFieldAttributes<T> extends InputHTMLAttributes<T> {

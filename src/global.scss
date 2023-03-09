@@ -1,3 +1,12 @@
+/*
+This file contains styling that relates to the entire app (including the root element)
+
+IMPORTANT NOTE ABOUT STYLING WITH REACT-ROUTER:
+I have set up the scss in multiple files just as a way to show which parts of the 
+styling apply to different elements. ALL css styling applies to all parts of the app
+when using React-Router, because it actually all runs on the same page.
+*/
+
 @import "theme";
 
 html {

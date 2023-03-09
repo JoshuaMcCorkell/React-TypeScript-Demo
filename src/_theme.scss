@@ -1,3 +1,8 @@
+/*
+This is an SCSS module file to give the app a unified theme, and reduce code duplication.
+SCSS files that start with an '_' are purely for importing to other files ('modules').
+*/
+
 $background: #111;
 $hover: #222;
 $active: #444;
