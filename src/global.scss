@@ -28,6 +28,7 @@ div.sidenav {
     padding: 15px;
     background-color: lighten($background, 5%);
     height: calc(100vh - 50px);
+    border-radius: 12px;
 
     img#navlogo {
         width: 100px;

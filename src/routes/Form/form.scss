@@ -59,7 +59,9 @@ div.form {
             grid-column: span 2;
             font-size: 110%;
             color: $red;
+            -webkit-user-select: none;
             user-select: none;
+            cursor: pointer;
         }
     
         &:checked+label {
@@ -83,5 +85,6 @@ div.form {
         font-size: 150%;
         border: none;
         padding: 10px;
+        cursor: pointer;
     }
 }

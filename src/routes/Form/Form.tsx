@@ -9,7 +9,6 @@ import "./form.scss";
 
 
 const ReactForm: FC = (props) => {
-
     // These 4 lines use the "custom hooks" that I created down below.
     const firstName = useInput("");
     const lastName = useInput("");
@@ -84,7 +83,6 @@ The event handler needs to be passed to an actual Input or Checkbox field, and
 the value is updated automatically by the event handler whenever a change occurs.
 */
 function useInput(initialValue: string) {
-
     /* useState is one of the most important parts of React. It gives your component
        a 'state', and your component will know when to re-render based on when that 
        state changes. It returns two things: The current value of the state, and a 
@@ -101,7 +99,6 @@ function useInput(initialValue: string) {
         onChange: handleChange,
     };
 }
-
 
 // This could probably be refactored, because it's basically the same code as the above
 // function, only a little but different,,, but anyway...
