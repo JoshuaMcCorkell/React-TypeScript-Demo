@@ -20,13 +20,13 @@ const CheckBoxButton: FC<CheckboxButtonAttributes<HTMLInputElement>> = (
     props
 ) => {
     // Use array destructuring to extract the id and label attribute
-    const { id, label, ...attributes } = props;
+    const { id, label, className, ...attributes } = props;
     return (
         <div className="input-field">
             <input
                 {...attributes}
                 id={id}
-                className="hidden-checkbox"
+                className={className + " hidden-checkbox"}
                 type="checkbox"
             />
             <label htmlFor={id}>{label}</label>
