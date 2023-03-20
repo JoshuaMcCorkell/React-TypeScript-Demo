@@ -7,7 +7,6 @@ import InputField from "./Components/InputField";
 import CheckBoxButton from "./Components/CheckBoxButton";
 import "./form.scss";
 
-
 const ReactForm: FC = (props) => {
     // These 4 lines use the "custom hooks" that I created down below.
     const firstName = useInput("");

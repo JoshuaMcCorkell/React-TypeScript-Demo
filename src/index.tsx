@@ -1,6 +1,9 @@
 /*
 This is the ENTRY POINT of the React app. Because this app uses React-Router, 
 this file also contains the information for the router. 
+
+***** NOTE *****
+Our final app will likely -not- use React-Router, this was just a test.
 */
 
 import React from "react";
